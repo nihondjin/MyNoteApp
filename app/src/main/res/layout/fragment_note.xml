@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".ui.note.Note">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        android:theme="@style/Theme.MyNoteApp.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolbarNoreFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/Theme.MyNoteApp.AppBarOverlay"
+            android:background="@color/dark_black">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="340dp"
+                android:padding="8dp">
+                <TextView
+                    android:id="@+id/btn_complete"
+                    android:layout_width="58dp"
+                    android:layout_height="26dp"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="top"
+                    android:text="Готово"
+                    android:textColor="@color/orange"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_noteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:hint="@string/enter_title"
+        android:singleLine="false"
+        android:gravity="start"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/appbar_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
